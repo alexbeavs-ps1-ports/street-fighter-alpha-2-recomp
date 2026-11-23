@@ -1,0 +1,59 @@
+# Autofilled by tools/new_project_layout/probe_disc.py from your legal dump.
+# Review before shipping. Runtime quirks / overlay seeds still need hand work.
+
+[game]
+name = "Street Fighter Alpha 2"
+id = "SLUS-00258"
+players = 1
+exe = "disc/SLUS_002.58"
+disc = "disc/Street Fighter Alpha 2 (USA) (Rev 1).cue"
+discs = ["disc/Street Fighter Alpha 2 (USA) (Rev 1).cue"]
+disc_serials = ["SLUS-00258"]
+load_address = "0x80118900"
+entry_pc = "0x80118908"
+text_size = "0x00096000"
+stack_base = "0x801FFFF0"
+
+# Digests are for data Track 01 (first BINARY FILE / TRACK 01).
+[prepare_disc]
+out_dir = "disc"
+bin_name = "Street Fighter Alpha 2 (USA) (Rev 1) (Track 1).bin"
+cue_name = "Street Fighter Alpha 2 (USA) (Rev 1).cue"
+boot_exe = "SLUS_002.58"
+known_sizes = [569795520]
+known_md5 = [
+  "8c92ac61f6ad94feec713d1ae9aa29f2",
+]
+known_sha1 = [
+  "f7d8c58545b49421b9bc304dd53e3165f0e6c2ca",
+]
+known_crc32 = [
+  "83fcbb57",
+]
+
+[recompiler]
+bios_config = "psxrecomp/bios/SCPH1001.toml"
+seeds = "seeds/ghidra_funcs.txt"
+out_dir = "generated"
+strict = true
+
+[runtime]
+openbios = false
+bios_hle = false
+window_title = "Street Fighter Alpha 2 Recompiled"
+memcard_dir = "saves"
+overlay_cache = true
+
+[video]
+renderer = "opengl"
+aspect_ratio = "4:3"
+
+[controller]
+default_mode = "digital"
+
+# Online mount gate: digests + track count + optional TOC fingerprint
+# (see docs/NETPLAY.md).
+[netplay]
+require_cue = true
+required_tracks = 2
+required_disc_fp = "17b5ecb82dc704ae5282e631b3ac7a20a14c5512e4a4155e3c778b22647af985"

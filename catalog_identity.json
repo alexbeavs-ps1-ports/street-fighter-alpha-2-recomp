@@ -1,0 +1,46 @@
+{
+  "format_version": 1,
+  "game": {
+    "name": "Street Fighter Alpha 2",
+    "id": "SLUS-00258",
+    "boot_exe": "SLUS_002.58"
+  },
+  "marketing": {
+    "description": "",
+    "publisher": "",
+    "year": "",
+    "region": "USA",
+    "players": 1
+  },
+  "rom_identity": {
+    "cue_name": "Street Fighter Alpha 2 (USA) (Rev 1).cue",
+    "bin_name": "Street Fighter Alpha 2 (USA) (Rev 1) (Track 1).bin",
+    "track_counts": [
+      2
+    ],
+    "require_cue": true,
+    "data_track": {
+      "size": 569795520,
+      "md5": "8c92ac61f6ad94feec713d1ae9aa29f2",
+      "sha1": "f7d8c58545b49421b9bc304dd53e3165f0e6c2ca",
+      "crc32": "83fcbb57"
+    },
+    "disc_fp": "17b5ecb82dc704ae5282e631b3ac7a20a14c5512e4a4155e3c778b22647af985"
+  },
+  "exe": {
+    "load_address": "0x80118900",
+    "entry_pc": "0x80118908",
+    "text_size": "0x00096000",
+    "stack_base": "0x801FFFF0"
+  },
+  "seeds": {
+    "count": 1051,
+    "source": "boot_exe_jal"
+  },
+  "warnings": [],
+  "notes": [
+    "entry_pc/load_address/text_size/stack_base taken from PS-X EXE header.",
+    "seeds are first-pass boot-EXE JAL targets (+ entry); expect to grow as overlays / runtime paths are discovered.",
+    "required_disc_fp is psxrecomp-toc-v1 (matches runtime DiscIdentity)."
+  ]
+}
